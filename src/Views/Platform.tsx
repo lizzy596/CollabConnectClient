@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Login = () => {
+const Platform = () => {
   return (
-    <div>Login</div>
+    <div>Platform</div>
   )
 }
 
-export default Login
+export default Platform
