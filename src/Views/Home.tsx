@@ -1,8 +1,11 @@
 import React from 'react'
+import HeaderBar from '../Features/Header/HeaderBar'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <HeaderBar />
+    </>
   )
 }
 
