@@ -4,11 +4,18 @@ const AddProjectForm: React.FC = () => {
   const [projectName, setProjectName] = useState('');
   const [description, setDescription] = useState('');
   const [goals, setGoals] = useState('');
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isPrivate, setIsPrivate] = useState(false);
 
   const handleProjectNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setProjectName(event.target.value);
   };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    setSelectedFile(file || null);
+  };
+
 
   const handleDescriptionChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setDescription(event.target.value);
@@ -72,6 +79,19 @@ const AddProjectForm: React.FC = () => {
           id="goals"
           value={goals}
           onChange={handleProjectNameChange}
+          className="w-full p-2 border border-gray-300 rounded"
+          required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label htmlFor="goals" className="block mb-2 font-bold">
+         Upload Photo
+        </label>
+        <input
+          type="file"
+          id="selectedFile"
+          onChange={handleFileChange}
           className="w-full p-2 border border-gray-300 rounded"
           required
         />
