@@ -86,7 +86,7 @@ const AddProjectForm: React.FC = () => {
 
       <div className="mb-4">
         <label htmlFor="goals" className="block mb-2 font-bold">
-         Upload Photo
+         Upload Project Photo
         </label>
         <input
           type="file"
