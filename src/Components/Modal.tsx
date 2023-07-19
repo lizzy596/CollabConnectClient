@@ -3,13 +3,13 @@ import React, { ReactNode, useState } from 'react';
 
 
 interface Props {
-  button :  React.FunctionComponent;
+  button :  React.ReactNode;
   buttonText?: string;
-  contentComponent:  React.FunctionComponent;
+  contentComponent:  React.ReactNode;
   manageModal?: () => ReactNode
 }
 
-const Modal: React.FC<Props> = ({ button, contentComponent  }) => {
+const Modal: React.FC<Props> = ({ button, buttonText, contentComponent, manageModal  }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const handleIsOpen = () => {

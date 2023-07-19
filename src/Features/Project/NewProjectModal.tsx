@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from '../../Components/Modal'
 import { AddProjectButton, AddProjectForm } from './components'
 
-const Project = () => {
+const NewProjectModal = () => {
   return (
     <>
     <Modal button={<AddProjectButton />} contentComponent={<AddProjectForm/>}/>
@@ -10,4 +10,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default NewProjectModal

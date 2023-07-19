@@ -1,11 +1,9 @@
 import React from 'react'
-import HeaderBar from '../Features/Header/HeaderBar'
-import Project from '../Features/Project/Project'
+import Project from '../Features/Project/NewProjectModal'
 
 const Home = () => {
   return (
     <>
-    <HeaderBar />
     <Project />
     </>
   )
